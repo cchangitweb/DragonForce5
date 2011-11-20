@@ -9,17 +9,17 @@ import java.io.IOException;
 
 public class AddressBook {
 // JR START 
-    private int functionChoice;
+private int functionChoice;
     
 // HC START 
 public AddressBook() {
 // default constructor: create an array of object type Contact and create menu
-    ArrayList<Contact> addressList = new ArrayList<Contact>();
-    System.out.println("Constructor AddressBook() called.");
+ArrayList<Contact> addressList = new ArrayList<Contact>();
+System.out.println("Constructor AddressBook() called.");
 }
 
 public void run(){
-    this.chooseFunction();
+this.chooseFunction();
 // testing each methods by for loop, later chooseFunction will prompt user to enter 
 // which function s/he wants
     for (int i=0; i<7; i++)
@@ -49,7 +49,7 @@ public void run(){
 
 //JR START 
 public void chooseFunction(){
-	System.out.println("Function Menu Called");
+System.out.println("Function Menu Called");
 /* contains the table of contents that allows the user to choose
    which function they wish to do
 1. Prompt that asks users to select a function
@@ -61,12 +61,12 @@ public void chooseFunction(){
 // HC START
 public void printAllContacts(){
 // print all contacts in the addressbook
-   System.out.println("Method printAllContacts() called.");
+System.out.println("Method printAllContacts() called.");
    }
 
 // JR START 
 public void newContact(){
-	System.out.println("newContact function Called");
+System.out.println("newContact function Called");
 /*  
 1. User is asked to enter
 	    A. first name 
@@ -93,7 +93,7 @@ Exception course: If the user leaves the last name blank, then the person will
 }
 
 public void deleteContact(){
-	System.out.println("deleteContact function called");
+System.out.println("deleteContact function called");
 /* 	 
 1.  The  user  is prompted to enter a single person's last name
 2.  The user enters the last name of the person to be deleted
