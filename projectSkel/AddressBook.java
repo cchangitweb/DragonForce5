@@ -2,19 +2,21 @@
 import java.util.Scanner;
 // array of objects
 import java.util.ArrayList;
+import java.util.Iterator;
 // write and read file
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class AddressBook {
-// JR START 
+// JR  
 private int functionChoice;
-    
-// HC START 
+
+// HC 
+private ArrayList<Contact> addressList = new ArrayList<Contact>();
+  
 public AddressBook() {
 // default constructor: create an array of object type Contact and create menu
-ArrayList<Contact> addressList = new ArrayList<Contact>();
 System.out.println("Constructor AddressBook() called.");
 }
 
@@ -47,7 +49,7 @@ this.chooseFunction();
     }}
 }
 
-//JR START 
+//JR  
 public void chooseFunction(){
 System.out.println("Function Menu Called");
 /* contains the table of contents that allows the user to choose
@@ -58,13 +60,26 @@ System.out.println("Function Menu Called");
 */
 }
 
-// HC START
+// HC 
 public void printAllContacts(){
 // print all contacts in the addressbook
 System.out.println("Method printAllContacts() called.");
+/*
+Iterator<Contact> itr = addressList.iterator();
+while (itr.hasNext()) {
+    Contact c = itr.next();
+    System.out.print(c.getFirstName());
+    System.out.print(c.getLastName());
+    System.out.print(c.getStreetAddress());
+    System.out.print(c.getEmailAddress());
+    System.out.print(c.getPhoneNumber());
+    System.out.println(c.getNotes());
+    System.out.println();
+  }
+*/
    }
 
-// JR START 
+// JR 
 public void newContact(){
 System.out.println("newContact function Called");
 /*  
@@ -123,6 +138,7 @@ a. Prints out contact information of person with the entered zipcode
 5. If so - continue
 6. else - return to project menu
 */
+
 }
 
 public void retrieveEmail() {
