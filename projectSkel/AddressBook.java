@@ -13,15 +13,15 @@ public class AddressBook {
     
 // HC START 
 public AddressBook() {
-    // default constructor: create an array of object type Contact and create menu
+// default constructor: create an array of object type Contact and create menu
     ArrayList<Contact> addressList = new ArrayList<Contact>();
     System.out.println("Constructor AddressBook() called.");
 }
 
-void run(){
+public void run(){
     this.chooseFunction();
-    // testing each methods by for loop, later chooseFunction will prompt user to enter 
-    // which function s/he wants
+// testing each methods by for loop, later chooseFunction will prompt user to enter 
+// which function s/he wants
     for (int i=0; i<7; i++)
     {
     	switch(i){
@@ -50,71 +50,65 @@ void run(){
 //JR START 
 public void chooseFunction(){
 	System.out.println("Function Menu Called");
-	// contains the table of contents that allows the user to choose
-	// which function they wish to do
-	/*1. Prompt that asks users to select a function
-	2. User enters which function they'd like to do
-	3. If function choice is 7 then program ends
+/* contains the table of contents that allows the user to choose
+   which function they wish to do
+1. Prompt that asks users to select a function
+2. User enters which function they'd like to do
+3. If function choice is 7 then program ends
 */
 }
 
 // HC START
-   public void printAllContacts(){
-   // print all contacts in the addressbook
+public void printAllContacts(){
+// print all contacts in the addressbook
    System.out.println("Method printAllContacts() called.");
    }
 
 // JR START 
-    public void newContact(){
+public void newContact(){
 	System.out.println("newContact function Called");
-	/*
-	*  
-    1. User is asked to enter
+/*  
+1. User is asked to enter
 	    A. first name 
         B. last name 
         C. street address 
         D. email address 
         E. phone number 
         F. notes
- 	2. User enters their contacts
+2. User enters their contacts
      	A. first name entered 
         B. last name entered 
         C. street address entered
         D. email address entered 
         E. phone number entered
         F. notes
-              Alternate courses: If the user leaves one or more of the fields blank,
-                        	the person will still be entered into the contact list.
-               Exception course: If the user leaves the last name blank, then the person will
-                       	not be entered into the contact list.
-     3.The new person is saved to memory. When the user quits the program,
-                     	the new person is saved to disk with the rest of the contacts.  
-
- 	4. Program returns the user to the function menu
-	*/
+Alternate courses: If the user leaves one or more of the fields blank,
+                   the person will still be entered into the contact list.
+Exception course: If the user leaves the last name blank, then the person will
+                  not be entered into the contact list.
+3.The new person is saved to memory. When the user quits the program,
+  the new person is saved to disk with the rest of the contacts.  
+4.Program returns the user to the function menu
+*/
 }
 
 public void deleteContact(){
 	System.out.println("deleteContact function called");
-	/*
-	*
-	* 	 
-	* 1.  The  user  is prompted to enter a single person's last name
-	* 2.  The user enters the last name of the person to be deleted
-	* 3.  The system retrieves  a  single  person  by  last  name and prints that contact to    the screen
- 
-	* 4.  The  user  is asked if they want  to  delete  this  person (Yes or No)   
-	* 5.  The user inputs their confirmation (Yes or No) 	 
-	* 6.  The  system  sets all value of this contact object to null
-	* 7.  The system prints the message "Contact deleted" to the screen
-	* 8.  The user is returned to the choseFunction menu
-	* 	 
-	* Alternate  courses:  When  asked  for  confirmation, if  the  user  does  not  confirm  the  delete,  then  the  system  does  not  
-	*                  	delete  the   person's  record.   
-	*
-	* Exception  course:  After  completing  this  use  case,  if  the  user  asks  to  undo  the   delete, the  system  is  not  able  to  undo  it.   	
+/* 	 
+1.  The  user  is prompted to enter a single person's last name
+2.  The user enters the last name of the person to be deleted
+3.  The system retrieves  a  single  person  by  last  name and prints that contact to the screen
+4.  The  user  is asked if they want  to  delete  this  person (Yes or No)   
+5.  The user inputs their confirmation (Yes or No) 	 
+6.  The  system  sets all value of this contact object to null
+7.  The system prints the message "Contact deleted" to the screen
+8.  The user is returned to the choseFunction menu 	 
+Alternate  courses:  When  asked  for  confirmation, if  the  user  does  not  confirm  the  delete,  then  the  system  does  not  
+                  	delete  the   person's  record.   
+
+Exception  course:  After  completing  this  use  case,  if  the  user  asks  to  undo  the   delete, the  system  is  not  able  to  undo  it.   	
 Execption: ( in step 3)if there are multiple people with the same last name, the computer asks which contact is to be deleted by first name..	 
-	*/
+*/
 }
 
 //CM START
